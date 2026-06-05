@@ -1,8 +1,7 @@
+import { Link } from 'react-router-dom';
 import { person } from '../data/portfolio.js';
 
-const baseUrl = import.meta.env.BASE_URL || '/';
-
-export default function Footer({ onNavigate }) {
+export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="section-shell footer-shell">
@@ -14,9 +13,9 @@ export default function Footer({ onNavigate }) {
           <a className="focus-ring" href={`mailto:${person.email}`}>
             Email
           </a>
-          <a className="focus-ring" href={baseUrl} onClick={(event) => onNavigate(event, '/')}>
+          <Link className="focus-ring" to="/">
             Back to top
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

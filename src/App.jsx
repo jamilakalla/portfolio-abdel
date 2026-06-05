@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
@@ -12,22 +12,9 @@ import Education from './pages/Education.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import { person } from './data/portfolio.js';
 
-const baseUrl = import.meta.env.BASE_URL || '/';
-const basename = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
-
-const normalizePath = (pathname) => {
-  if (!pathname.startsWith(basename)) {
-    return pathname || '/';
-  }
-
-  const relative = pathname.slice(basename.length) || '/';
-  return relative === '' ? '/' : relative;
-};
-
 export default function App() {
   const location = useLocation();
-  const navigate = useNavigate();
-  const currentPath = normalizePath(location.pathname);
+  const currentPath = location.pathname;
 
   useEffect(() => {
     document.title =
@@ -50,37 +37,23 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPath]);
 
-  const onNavigate = (event, href) => {
-    if (
-      href.startsWith('http') ||
-      href.startsWith('mailto:') ||
-      href.startsWith('tel:') ||
-      href.endsWith('.pdf')
-    ) {
-      return;
-    }
-
-    event.preventDefault();
-    navigate(href);
-  };
-
   return (
     <>
-      <Header currentPath={currentPath} onNavigate={onNavigate} />
+      <Header currentPath={currentPath} />
       <main>
         <Routes>
-          <Route path="/" element={<Home onNavigate={onNavigate} />} />
-          <Route path="/about" element={<About onNavigate={onNavigate} />} />
-          <Route path="/skills" element={<Skills onNavigate={onNavigate} />} />
-          <Route path="/experience" element={<Experience onNavigate={onNavigate} />} />
-          <Route path="/projects" element={<Projects onNavigate={onNavigate} />} />
-          <Route path="/services" element={<Services onNavigate={onNavigate} />} />
-          <Route path="/education" element={<Education onNavigate={onNavigate} />} />
-          <Route path="/contact" element={<ContactPage onNavigate={onNavigate} />} />
-          <Route path="*" element={<Home onNavigate={onNavigate} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
-      <Footer onNavigate={onNavigate} />
+      <Footer />
     </>
   );
 }

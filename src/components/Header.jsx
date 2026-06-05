@@ -1,33 +1,21 @@
 import { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { navItems, person } from '../data/portfolio.js';
 
-const baseUrl = import.meta.env.BASE_URL || '/';
-const getHref = (href) => (href === '/' ? baseUrl : `${baseUrl}${href.replace(/^\//, '')}`);
-
-export default function Header({ currentPath, onNavigate }) {
+export default function Header({ currentPath }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     setMenuOpen(false);
   }, [currentPath]);
 
-  const handleClick = (event, href) => {
-    onNavigate(event, href);
-    setMenuOpen(false);
-  };
-
   return (
     <header className="site-header">
       <div className="section-shell header-shell">
-        <a
-          className="brand-link focus-ring"
-          href={baseUrl}
-          aria-label="Back to top"
-          onClick={(event) => handleClick(event, '/')}
-        >
+        <Link className="brand-link focus-ring" to="/" aria-label="Back to top" onClick={() => setMenuOpen(false)}>
           <span className="brand-mark">{person.initials}</span>
           <span className="brand-name">{person.name}</span>
-        </a>
+        </Link>
 
         <button
           className="menu-button focus-ring"
@@ -46,16 +34,17 @@ export default function Header({ currentPath, onNavigate }) {
 
         <nav id="main-navigation" className={`site-nav ${menuOpen ? 'is-open' : ''}`}>
           {navItems.map((item) => (
-            <a
+            <NavLink
               key={item.href}
-              className={`nav-link focus-ring ${
-                currentPath === item.href ? 'is-active' : ''
-              }`}
-              href={getHref(item.href)}
-              onClick={(event) => handleClick(event, item.href)}
+              className={({ isActive }) =>
+                `nav-link focus-ring ${isActive ? 'is-active' : ''}`
+              }
+              to={item.href}
+              end
+              onClick={() => setMenuOpen(false)}
             >
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
       </div>

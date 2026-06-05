@@ -1,9 +1,8 @@
+import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard.jsx';
 import { projectItems } from '../data/portfolio.js';
 
-const baseUrl = import.meta.env.BASE_URL || '/';
-
-export default function Projects({ onNavigate }) {
+export default function Projects() {
   return (
     <section id="projects" className="section-padding bg-ivory projects-page">
       <div className="section-shell">
@@ -19,16 +18,12 @@ export default function Projects({ onNavigate }) {
         </div>
 
         <div className="button-row projects-actions">
-          <a className="button button-primary focus-ring" href={baseUrl} onClick={(event) => onNavigate(event, '/')}>
+          <Link className="button button-primary focus-ring" to="/">
             Back to home
-          </a>
-          <a
-            className="button button-outline-dark focus-ring"
-            href={`${baseUrl}contact`}
-            onClick={(event) => onNavigate(event, '/contact')}
-          >
+          </Link>
+          <Link className="button button-outline-dark focus-ring" to="/contact">
             Contact
-          </a>
+          </Link>
         </div>
 
         <div className="projects-grid">
