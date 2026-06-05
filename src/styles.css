@@ -105,7 +105,7 @@ button {
 }
 
 .section-padding {
-  padding: 6rem 0;
+  padding: 4.25rem 0;
 }
 
 .bg-ivory {
@@ -356,6 +356,10 @@ button {
   gap: 3rem;
   padding-top: 8rem;
   padding-bottom: 10rem;
+}
+
+main > section.hero-section:not(#top) .hero-grid {
+  padding-bottom: 4.5rem;
 }
 
 .hero-copy {
@@ -672,6 +676,64 @@ button {
   color: rgba(255, 255, 255, 0.78);
 }
 
+/* Career timeline - clearer two-column layout for each role */
+.timeline-card--career {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 0.85rem;
+}
+
+.timeline-card--career .timeline-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-card--career .timeline-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-card--career h3 {
+  color: var(--white);
+  font-size: 1.35rem;
+}
+
+.timeline-card--career .timeline-strengths {
+  color: rgba(255,255,255,0.78);
+  margin-top: 0.25rem;
+}
+
+.timeline-card--career .timeline-resp .bullet-list li {
+  color: rgba(255,255,255,0.78);
+}
+
+/* Highlight cards styling when shown on dark background */
+.bg-ink .highlight-grid div {
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.9);
+  border-left-color: var(--brass-soft);
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .timeline-card--career {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .timeline-card--career .timeline-meta {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
 .service-grid {
   align-items: stretch;
 }
@@ -873,7 +935,7 @@ button {
 }
 
 .projects-page {
-  padding-top: 8rem;
+  padding-top: 4rem;
 }
 
 .projects-actions {
@@ -990,7 +1052,7 @@ button {
   }
 
   .section-padding {
-    padding: 6rem 0;
+    padding: 5rem 0;
   }
 
   .button-row {
@@ -1050,7 +1112,7 @@ button {
   }
 
   .section-padding {
-    padding: 7rem 0;
+    padding: 6rem 0;
   }
 
   .menu-button {
@@ -1118,7 +1180,7 @@ button {
   }
 
   .projects-page {
-    padding-top: 9rem;
+    padding-top: 5rem;
   }
 }
 

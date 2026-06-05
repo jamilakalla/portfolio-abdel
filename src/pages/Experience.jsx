@@ -21,13 +21,14 @@ export default function Experience({ onNavigate }) {
         <div className="section-shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Experience</p>
-            <h1>Professional Track Record</h1>
+            <h1>Professional Experience</h1>
             <p className="hero-lede">
-              A long track record in decorative painting and gypsum finishing.
+              20+ years delivering decorative painting, gypsum finishing and supervising teams on premium
+              interior projects.
             </p>
             <p className="hero-summary">
-              Over 20 years of professional experience in decorative painting, gypsum works and team supervision
-              for premium interior projects across the UAE and international markets.
+              Hands-on expertise in decorative finishes, team supervision and quality-led handovers for
+              residential, hospitality and commercial interiors.
             </p>
           </div>
         </div>
@@ -47,19 +48,34 @@ export default function Experience({ onNavigate }) {
             </p>
           </div>
 
+          <div className="highlight-grid" style={{ marginTop: '1.25rem' }}>
+            <div>20+ Years Experience</div>
+            <div>Team Supervision</div>
+            <div>Decorative Finishing</div>
+            <div>Quality Control</div>
+          </div>
+
           <div className="timeline-list">
             {experienceItems.map((item) => (
-              <article key={item.title} className="timeline-card">
-                <div>
+              <article key={item.title} className="timeline-card timeline-card--career">
+                <div className="timeline-meta">
                   <p className="timeline-number">{item.number}</p>
                   <p className="timeline-period">{item.period}</p>
                   <p className="timeline-location">{item.location}</p>
                 </div>
-                <div>
+
+                <div className="timeline-main">
                   <p className="timeline-eyebrow">{item.eyebrow}</p>
                   <h3>{item.title}</h3>
-                  <p className="timeline-description">{item.description}</p>
-                  <BulletList items={item.bullets} dark />
+
+                  <div className="timeline-strengths">
+                    <p className="timeline-description">{item.description}</p>
+                  </div>
+
+                  <div className="timeline-resp">
+                    <p className="eyebrow" style={{ marginTop: '0.75rem' }}>Key responsibilities</p>
+                    <BulletList items={item.bullets} dark />
+                  </div>
                 </div>
               </article>
             ))}
