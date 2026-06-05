@@ -1,16 +1,17 @@
 :root {
   --ink: #101112;
-  --charcoal: #242728;
+  --charcoal: #2d3133;
   --brass: #b98e4a;
-  --brass-hover: #c99f5b;
+  --brass-soft: #d0b57a;
+  --brass-hover: #d9aa63;
   --ivory: #f7f3ea;
-  --parchment: #ede5d8;
+  --parchment: #efe6d4;
   --sage: #657467;
-  --clay: #9e5c4f;
-  --stone: #beb6a8;
+  --clay: #8f6754;
+  --stone: #b9a994;
   --white: #ffffff;
-  --shadow-premium: 0 24px 90px rgba(16, 17, 18, 0.16);
-  --font-sans: Arial, Helvetica, sans-serif;
+  --shadow-premium: 0 28px 90px rgba(16, 17, 18, 0.16);
+  --font-sans: Inter, Arial, Helvetica, sans-serif;
   --font-serif: Georgia, "Times New Roman", serif;
 }
 
@@ -24,8 +25,9 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
   color: var(--ink);
-  background: var(--ivory);
+  background: linear-gradient(180deg, #090a0c 0%, #141719 72%);
   font-family: var(--font-sans);
 }
 
@@ -37,8 +39,7 @@ textarea {
 }
 
 main {
-  min-height: 100vh;
-  padding-top: 5rem;
+  min-height: calc(100vh - 5rem);
 }
 
 img {
@@ -72,7 +73,7 @@ button {
 
 ::selection {
   color: var(--ink);
-  background: var(--brass);
+  background: rgba(185, 142, 74, 0.24);
 }
 
 .sr-only {
@@ -98,13 +99,13 @@ button {
 
 .section-shell {
   width: 100%;
-  max-width: 80rem;
+  max-width: 84rem;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
 .section-padding {
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .bg-ivory {
@@ -126,23 +127,24 @@ button {
 .eyebrow {
   margin-bottom: 1rem;
   color: var(--brass);
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.8rem;
+  line-height: 1.3;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .section-heading {
-  max-width: 48rem;
+  max-width: 44rem;
 }
 
 .section-title {
   color: var(--ink);
   font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-size: clamp(2.25rem, 4.5vw, 3rem);
   font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: 0;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
 }
 
 .section-title-light {
@@ -152,9 +154,9 @@ button {
 .premium-card {
   border: 1px solid rgba(16, 17, 18, 0.1);
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.88);
   box-shadow: var(--shadow-premium);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(18px);
 }
 
 .button-row {
@@ -169,13 +171,13 @@ button {
 
 .button {
   display: inline-flex;
-  min-height: 3rem;
+  min-height: 3.25rem;
   align-items: center;
   justify-content: center;
-  padding: 0.85rem 1.5rem;
+  padding: 0.9rem 1.6rem;
   border-radius: 999px;
   font-weight: 700;
-  transition: color 200ms ease, border-color 200ms ease, background 200ms ease, transform 200ms ease;
+  transition: transform 200ms ease, color 200ms ease, border-color 200ms ease, background 200ms ease;
 }
 
 .button:hover {
@@ -193,7 +195,8 @@ button {
 
 .button-outline-light {
   color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .button-outline-light:hover {
@@ -204,6 +207,7 @@ button {
 .button-outline-dark {
   color: var(--ink);
   border: 1px solid rgba(185, 142, 74, 0.4);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .button-outline-dark:hover {
@@ -218,8 +222,8 @@ button {
   right: 0;
   z-index: 50;
   color: var(--white);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(16, 17, 18, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(16, 17, 18, 0.94);
   backdrop-filter: blur(24px);
 }
 
@@ -247,6 +251,8 @@ button {
   color: var(--brass);
   border: 1px solid var(--brass);
   font-family: var(--font-serif);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
 }
 
 .brand-name {
@@ -264,11 +270,12 @@ button {
   place-items: center;
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.75rem;
 }
 
 .menu-lines {
   display: grid;
-  gap: 0.375rem;
+  gap: 0.35rem;
 }
 
 .menu-lines span {
@@ -284,7 +291,7 @@ button {
   left: 1.25rem;
   right: 1.25rem;
   display: none;
-  gap: 0.375rem;
+  gap: 0.4rem;
   max-height: calc(100vh - 7rem);
   overflow: auto;
   padding: 1rem;
@@ -299,23 +306,18 @@ button {
 }
 
 .nav-link {
-  padding: 0.85rem 1.1rem;
+  padding: 0.95rem 1.1rem;
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.95rem;
   font-weight: 700;
-  border-radius: 0.75rem;
-  transition: color 160ms ease, background 160ms ease;
+  border-radius: 0.85rem;
+  transition: color 180ms ease, background 180ms ease;
 }
 
 .nav-link:hover,
 .nav-link.is-active {
   color: var(--brass);
   background: rgba(255, 255, 255, 0.08);
-}
-
-.nav-link:hover,
-.nav-link.is-active {
-  color: var(--brass);
 }
 
 .hero-section {
@@ -335,6 +337,7 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  filter: saturate(0.95) brightness(0.85);
 }
 
 .hero-overlay {
@@ -342,8 +345,8 @@ button {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(16, 17, 18, 0.95), rgba(16, 17, 18, 0.76) 42%, rgba(16, 17, 18, 0.18)),
-    linear-gradient(0deg, rgba(16, 17, 18, 0.78), rgba(16, 17, 18, 0) 46%);
+    linear-gradient(90deg, rgba(16, 17, 18, 0.96), rgba(16, 17, 18, 0.78) 42%, rgba(16, 17, 18, 0.18)),
+    linear-gradient(180deg, rgba(16, 17, 18, 0.88), rgba(16, 17, 18, 0.3) 55%, rgba(16, 17, 18, 0.88));
 }
 
 .hero-grid {
@@ -356,24 +359,25 @@ button {
 }
 
 .hero-copy {
-  max-width: 56rem;
+  max-width: 52rem;
 }
 
 .hero-role {
   margin-bottom: 1.25rem;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.15rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .hero-copy h1 {
-  max-width: 12ch;
+  max-width: 14ch;
   color: var(--white);
   font-family: var(--font-serif);
   font-size: clamp(3rem, 8vw, 4.5rem);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: -0.04em;
 }
 
 .mobile-hero-portrait {
@@ -383,17 +387,17 @@ button {
 .hero-lede {
   max-width: 48rem;
   margin-top: 2rem;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.3rem;
   line-height: 2rem;
 }
 
 .hero-summary {
   max-width: 42rem;
-  margin-top: 1.25rem;
-  color: rgba(255, 255, 255, 0.68);
+  margin-top: 1.4rem;
+  color: rgba(255, 255, 255, 0.72);
   font-size: 1.05rem;
-  line-height: 1.85rem;
+  line-height: 1.9rem;
 }
 
 .hero-copy .button-row {
@@ -402,21 +406,23 @@ button {
 
 .hero-portrait {
   position: relative;
-  width: min(100%, 18rem);
+  width: min(100%, 22rem);
   margin: 0 auto;
 }
 
 .hero-portrait::before {
   position: absolute;
-  inset: -0.8rem;
+  inset: -1rem;
   content: "";
-  border: 1px solid rgba(185, 142, 74, 0.35);
+  border: 1px solid rgba(185, 142, 74, 0.3);
+  border-radius: 1.25rem;
 }
 
 .portrait-frame {
   position: relative;
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  border-radius: 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: var(--ink);
   box-shadow: var(--shadow-premium);
@@ -434,25 +440,26 @@ button {
   width: calc(100% - 1rem);
   margin-top: -3rem;
   margin-left: 1rem;
-  padding: 1rem;
+  padding: 1.1rem;
   color: var(--white);
+  border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(16, 17, 18, 0.84);
-  backdrop-filter: blur(8px);
+  background: rgba(16, 17, 18, 0.86);
+  backdrop-filter: blur(10px);
 }
 
 .role-card p {
   color: var(--brass);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
 .role-card span {
   display: block;
   margin-top: 0.5rem;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.6rem;
 }
 
 .hero-stats-shell {
@@ -462,15 +469,16 @@ button {
 
 .hero-stats {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(16, 17, 18, 0.55);
+  background: rgba(16, 17, 18, 0.6);
   backdrop-filter: blur(12px);
   border-radius: 1rem;
   overflow: hidden;
 }
 
 .stat-cell {
-  padding: 1rem;
+  padding: 1.25rem 1.35rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
@@ -481,15 +489,15 @@ button {
 .stat-cell p {
   color: var(--brass);
   font-family: var(--font-serif);
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.9rem;
+  line-height: 2.3rem;
 }
 
 .stat-cell span {
   display: block;
-  margin-top: 0.25rem;
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.875rem;
+  margin-top: 0.35rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
 }
 
 .two-column,
@@ -515,25 +523,27 @@ button {
 
 .body-stack {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.4rem;
   margin-top: 1.75rem;
   color: var(--charcoal);
-  line-height: 1.75rem;
+  line-height: 1.85rem;
 }
 
 .highlight-grid {
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-top: 2.5rem;
 }
 
 .highlight-grid div {
-  padding: 1rem;
+  padding: 1.4rem 1.25rem;
   color: var(--charcoal);
-  border-left: 2px solid var(--brass);
-  background: rgba(255, 255, 255, 0.5);
-  font-size: 0.875rem;
+  border-left: 4px solid var(--brass);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
+  box-shadow: 0 24px 60px rgba(16, 17, 18, 0.06);
 }
 
 .card-grid {
@@ -543,7 +553,9 @@ button {
 }
 
 .skill-card {
-  padding: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 1rem;
 }
 
 .skill-card h3,
@@ -552,14 +564,14 @@ button {
 .contact-card h3,
 .brief-card h3 {
   color: var(--ink);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .bullet-list {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.85rem;
   margin-top: 1.5rem;
 }
 
@@ -567,20 +579,21 @@ button {
   display: flex;
   gap: 0.75rem;
   color: var(--charcoal);
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.8rem;
 }
 
 .bullet-dot {
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 0.45rem;
+  height: 0.45rem;
   flex: 0 0 auto;
   margin-top: 0.55rem;
   background: var(--brass);
+  border-radius: 50%;
 }
 
 .bullet-list-dark li {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .bullet-list-dark .bullet-dot {
@@ -595,52 +608,53 @@ button {
 .split-heading > p {
   max-width: 42rem;
   color: var(--charcoal);
-  font-size: 1.125rem;
+  font-size: 1.15rem;
   line-height: 2rem;
 }
 
 .bg-ink .split-heading > p {
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .timeline-list {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
   margin-top: 3.5rem;
 }
 
 .timeline-card {
   display: grid;
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
 }
 
 .timeline-number {
   color: var(--brass);
   font-family: var(--font-serif);
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
 }
 
 .timeline-period {
   margin-top: 1.25rem;
   color: var(--white);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
 .timeline-location {
   margin-top: 0.5rem;
-  color: rgba(255, 255, 255, 0.58);
-  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.9rem;
 }
 
 .timeline-eyebrow {
   color: var(--brass);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -648,14 +662,14 @@ button {
 .timeline-card h3 {
   margin-top: 0.5rem;
   color: var(--white);
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 700;
   line-height: 2rem;
 }
 
 .timeline-description {
   margin-top: 0.75rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .service-grid {
@@ -663,20 +677,21 @@ button {
 }
 
 .service-card {
-  padding: 1.5rem;
-  border: 1px solid rgba(16, 17, 18, 0.1);
-  background: rgba(255, 255, 255, 0.5);
+  padding: 1.75rem;
+  border: 1px solid rgba(16, 17, 18, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
 }
 
 .service-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   line-height: 2rem;
 }
 
 .service-card p {
   margin-top: 1rem;
   color: var(--charcoal);
-  line-height: 1.75rem;
+  line-height: 1.9rem;
 }
 
 .tag-list {
@@ -687,12 +702,13 @@ button {
 }
 
 .tag-list span {
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.85rem;
   color: var(--charcoal);
-  border: 1px solid rgba(185, 142, 74, 0.4);
-  background: rgba(185, 142, 74, 0.1);
+  border: 1px solid rgba(185, 142, 74, 0.35);
+  background: rgba(185, 142, 74, 0.12);
   font-size: 0.875rem;
   font-weight: 700;
+  border-radius: 999px;
 }
 
 .education-list {
@@ -702,9 +718,10 @@ button {
 }
 
 .education-card {
-  padding: 1.5rem;
+  padding: 1.75rem;
   border-left: 4px solid var(--brass);
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 1rem;
 }
 
 .education-card-head {
@@ -716,23 +733,23 @@ button {
 .education-card-head p {
   margin-top: 0.25rem;
   color: rgba(36, 39, 40, 0.7);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
 .education-card-head span {
   color: var(--clay);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
 .education-card ul {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.65rem;
   margin-top: 1rem;
   color: var(--charcoal);
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.7rem;
 }
 
 .language-card {
@@ -801,10 +818,11 @@ button {
 }
 
 .contact-card {
-  padding: 1.5rem;
+  padding: 1.75rem;
   color: var(--white);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
 }
 
 .contact-card h3,
@@ -833,20 +851,21 @@ button {
 
 .contact-row span:first-child {
   color: var(--brass);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
 .contact-row span:last-child {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.77);
+  font-size: 0.9rem;
   overflow-wrap: anywhere;
 }
 
 .brief-card {
-  padding: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
 }
 
 .brief-card .bullet-list {
@@ -863,7 +882,7 @@ button {
 
 .projects-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
   margin-top: 3rem;
 }
 
@@ -872,6 +891,10 @@ button {
   min-height: 0;
   overflow: hidden;
   flex-direction: column;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(16, 17, 18, 0.08);
+  box-shadow: 0 35px 80px rgba(16, 17, 18, 0.08);
   transition: transform 260ms ease, box-shadow 260ms ease;
 }
 
@@ -881,9 +904,9 @@ button {
 }
 
 .project-image-wrap {
-  height: 15rem;
+  height: 18rem;
   overflow: hidden;
-  background: rgba(190, 182, 168, 0.3);
+  background: rgba(190, 182, 168, 0.18);
 }
 
 .project-image {
@@ -894,42 +917,44 @@ button {
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .project-content {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1.75rem;
   gap: 1rem;
 }
 
 .card-kicker {
   color: var(--clay);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .project-content h3 {
   margin-top: 0.75rem;
   color: var(--ink);
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 700;
-  line-height: 2rem;
+  line-height: 1.6;
 }
 
 .card-meta {
   margin-top: 0.5rem;
-  color: rgba(36, 39, 40, 0.7);
-  font-size: 0.875rem;
+  color: rgba(36, 39, 40, 0.72);
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
 .project-description {
   margin-top: 1.25rem;
   color: var(--charcoal);
-  line-height: 1.6rem;
+  line-height: 1.75rem;
 }
 
 .site-footer {
