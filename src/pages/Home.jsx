@@ -12,6 +12,8 @@ import {
   skillGroups,
 } from '../data/portfolio.js';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 function BulletList({ items, dark = false }) {
   return (
     <ul className={`bullet-list ${dark ? 'bullet-list-dark' : ''}`}>
@@ -70,7 +72,7 @@ export default function Home({ onNavigate }) {
             <div className="button-row">
               <a
                 className="button button-primary focus-ring"
-                href="/contact"
+                href={`${baseUrl}contact`}
                 onClick={(event) => onNavigate(event, '/contact')}
               >
                 Contact for opportunities

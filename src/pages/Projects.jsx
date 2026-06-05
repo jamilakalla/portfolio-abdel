@@ -1,6 +1,8 @@
 import ProjectCard from '../components/ProjectCard.jsx';
 import { projectItems } from '../data/portfolio.js';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 export default function Projects({ onNavigate }) {
   return (
     <section id="projects" className="section-padding bg-ivory projects-page">
@@ -17,12 +19,12 @@ export default function Projects({ onNavigate }) {
         </div>
 
         <div className="button-row projects-actions">
-          <a className="button button-primary focus-ring" href="/" onClick={(event) => onNavigate(event, '/')}>
+          <a className="button button-primary focus-ring" href={baseUrl} onClick={(event) => onNavigate(event, '/')}>
             Back to home
           </a>
           <a
             className="button button-outline-dark focus-ring"
-            href="/contact"
+            href={`${baseUrl}contact`}
             onClick={(event) => onNavigate(event, '/contact')}
           >
             Contact

@@ -1,5 +1,7 @@
 import { person } from '../data/portfolio.js';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+
 export default function Footer({ onNavigate }) {
   return (
     <footer className="site-footer">
@@ -12,7 +14,7 @@ export default function Footer({ onNavigate }) {
           <a className="focus-ring" href={`mailto:${person.email}`}>
             Email
           </a>
-          <a className="focus-ring" href="/" onClick={(event) => onNavigate(event, '/')}>
+          <a className="focus-ring" href={baseUrl} onClick={(event) => onNavigate(event, '/')}>
             Back to top
           </a>
         </div>

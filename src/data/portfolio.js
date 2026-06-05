@@ -8,10 +8,10 @@ export const person = {
   phoneHref: 'tel:+971581632025',
   linkedin: 'https://www.linkedin.com/in/abdellah-ait-messaoud-478a57213/',
   linkedinLabel: 'abdellah-ait-messaoud',
-  cvUrl: '/abdellah-cv.pdf',
-  profileImage: '/abdellah-profile.jpg',
-  heroImage: '/luxury-interior-hero.png',
-  availability: 'Open to senior finishing, painting and gypsum supervision roles',
+  cvUrl: `${import.meta.env.BASE_URL}abdellah-cv.pdf`,
+  profileImage: `${import.meta.env.BASE_URL}abdellah-profile.jpg`,
+  heroImage: `${import.meta.env.BASE_URL}luxury-interior-hero.png`,
+  availability: 'Open to senior finishing, painting and gypsum ...',
 };
 
 export const navItems = [
@@ -119,7 +119,7 @@ export const projectItems = [
     title: 'Textured decorative painting',
     meta: 'Project name, location and client à compléter',
     description: 'Relief-textured decorative painting finish with layered surface effects.',
-    image: '/projects/decorative-painting-texture-01.jpg',
+    image: `${import.meta.env.BASE_URL}projects/decorative-painting-texture-01.jpg`,
     alt: 'Close-up of textured decorative painting finish on a wall',
     bullets: [
       'Decoration peinture, not gypsum or plaster decoration.',
@@ -132,7 +132,7 @@ export const projectItems = [
     title: 'Warm mineral wall effect',
     meta: 'Project name, location and client à compléter',
     description: 'Warm neutral decorative wall painting with soft mineral texture for a premium interior mood.',
-    image: '/projects/decorative-painting-wall-02.jpg',
+    image: `${import.meta.env.BASE_URL}projects/decorative-painting-wall-02.jpg`,
     alt: 'Warm beige decorative painted wall with mineral texture and handcrafted surface effect',
     bullets: [
       'Decoration peinture finish with soft tonal variation.',
@@ -145,7 +145,7 @@ export const projectItems = [
     title: 'Patterned decorative paint finish',
     meta: 'Project name, location and client à compléter',
     description: 'Subtle patterned decorative painting finish with layered texture and light reflective detail.',
-    image: '/projects/decorative-painting-pattern-03.jpg',
+    image: `${import.meta.env.BASE_URL}projects/decorative-painting-pattern-03.jpg`,
     alt: 'Decorative painted wall finish with a subtle repeating geometric floral pattern',
     bullets: [
       'Decoration peinture with repeated ornamental pattern.',
@@ -158,7 +158,7 @@ export const projectItems = [
     title: 'Premium commercial surface finish',
     meta: 'Project name, location and client à compléter',
     description: 'Decorative painting finish applied in a premium commercial interior atmosphere.',
-    image: '/projects/decorative-painting-commercial-04.jpg',
+    image: `${import.meta.env.BASE_URL}projects/decorative-painting-commercial-04.jpg`,
     alt: 'Premium commercial interior with dark decorative painted wall and ceiling finishes',
     bullets: [
       'Decoration peinture for wall and ceiling visual continuity.',

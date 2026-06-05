@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
@@ -11,59 +12,45 @@ import Education from './pages/Education.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import { person } from './data/portfolio.js';
 
-const getPath = () => {
-  const normalized = window.location.pathname.replace(/\/+$/, '');
-  return normalized || '/';
-};
+const baseUrl = import.meta.env.BASE_URL || '/';
+const basename = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
 
-const scrollToCurrentHash = () => {
-  if (!window.location.hash) {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    return;
+const normalizePath = (pathname) => {
+  if (!pathname.startsWith(basename)) {
+    return pathname || '/';
   }
 
-  const target = document.querySelector(window.location.hash);
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  const relative = pathname.slice(basename.length) || '/';
+  return relative === '' ? '/' : relative;
 };
 
 export default function App() {
-  const [path, setPath] = useState(getPath);
-
-  useEffect(() => {
-    const updatePath = () => setPath(getPath());
-    window.addEventListener('popstate', updatePath);
-    window.addEventListener('hashchange', updatePath);
-
-    return () => {
-      window.removeEventListener('popstate', updatePath);
-      window.removeEventListener('hashchange', updatePath);
-    };
-  }, []);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPath = normalizePath(location.pathname);
 
   useEffect(() => {
     document.title =
-      path === '/projects'
+      currentPath === '/projects'
         ? `Projects | ${person.name}`
-        : path === '/about'
+        : currentPath === '/about'
         ? `About | ${person.name}`
-        : path === '/skills'
+        : currentPath === '/skills'
         ? `Skills | ${person.name}`
-        : path === '/experience'
+        : currentPath === '/experience'
         ? `Experience | ${person.name}`
-        : path === '/services'
+        : currentPath === '/services'
         ? `Services | ${person.name}`
-        : path === '/education'
+        : currentPath === '/education'
         ? `Education | ${person.name}`
-        : path === '/contact'
+        : currentPath === '/contact'
         ? `Contact | ${person.name}`
         : `${person.name} | Decorative Gypsum & Mural Painting Specialist`;
 
-    window.requestAnimationFrame(scrollToCurrentHash);
-  }, [path]);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPath]);
 
-  const navigate = useCallback((event, href) => {
+  const onNavigate = (event, href) => {
     if (
       href.startsWith('http') ||
       href.startsWith('mailto:') ||
@@ -74,40 +61,26 @@ export default function App() {
     }
 
     event.preventDefault();
-    const url = new URL(href, window.location.origin);
-    window.history.pushState({}, '', `${url.pathname}${url.hash}`);
-    setPath(getPath());
-    window.requestAnimationFrame(scrollToCurrentHash);
-  }, []);
-
-  const renderPage = () => {
-    switch (path) {
-      case '/about':
-        return <About onNavigate={navigate} />;
-      case '/skills':
-        return <Skills onNavigate={navigate} />;
-      case '/experience':
-        return <Experience onNavigate={navigate} />;
-      case '/projects':
-        return <Projects onNavigate={navigate} />;
-      case '/services':
-        return <Services onNavigate={navigate} />;
-      case '/education':
-        return <Education onNavigate={navigate} />;
-      case '/contact':
-        return <ContactPage onNavigate={navigate} />;
-      default:
-        return <Home onNavigate={navigate} />;
-    }
+    navigate(href);
   };
-
-  const page = renderPage();
 
   return (
     <>
-      <Header currentPath={path} onNavigate={navigate} />
-      <main>{page}</main>
-      <Footer onNavigate={navigate} />
+      <Header currentPath={currentPath} onNavigate={onNavigate} />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home onNavigate={onNavigate} />} />
+          <Route path="/about" element={<About onNavigate={onNavigate} />} />
+          <Route path="/skills" element={<Skills onNavigate={onNavigate} />} />
+          <Route path="/experience" element={<Experience onNavigate={onNavigate} />} />
+          <Route path="/projects" element={<Projects onNavigate={onNavigate} />} />
+          <Route path="/services" element={<Services onNavigate={onNavigate} />} />
+          <Route path="/education" element={<Education onNavigate={onNavigate} />} />
+          <Route path="/contact" element={<ContactPage onNavigate={onNavigate} />} />
+          <Route path="*" element={<Home onNavigate={onNavigate} />} />
+        </Routes>
+      </main>
+      <Footer onNavigate={onNavigate} />
     </>
   );
 }

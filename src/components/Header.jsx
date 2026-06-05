@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { navItems, person } from '../data/portfolio.js';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+const getHref = (href) => (href === '/' ? baseUrl : `${baseUrl}${href.replace(/^\//, '')}`);
+
 export default function Header({ currentPath, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,7 +21,7 @@ export default function Header({ currentPath, onNavigate }) {
       <div className="section-shell header-shell">
         <a
           className="brand-link focus-ring"
-          href="/"
+          href={baseUrl}
           aria-label="Back to top"
           onClick={(event) => handleClick(event, '/')}
         >
@@ -48,7 +51,7 @@ export default function Header({ currentPath, onNavigate }) {
               className={`nav-link focus-ring ${
                 currentPath === item.href ? 'is-active' : ''
               }`}
-              href={item.href}
+              href={getHref(item.href)}
               onClick={(event) => handleClick(event, item.href)}
             >
               {item.label}
