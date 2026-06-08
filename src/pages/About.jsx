@@ -26,7 +26,7 @@ export default function About() {
         </div>
 
         <div className="image-feature">
-          <img src={person.heroImage} alt="Luxury interior with premium decorative finishes" />
+          <img src={`${import.meta.env.BASE_URL}abdo-profil.png`} alt="Abdellah Ait Messaoud professional portrait" />
           <div className="profile-float">
             <strong>{person.name}</strong>
             <span>Decorative Finishing Supervisor</span>
