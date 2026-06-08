@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
@@ -14,7 +14,17 @@ import { person } from './data/portfolio.js';
 
 export default function App() {
   const location = useLocation();
+  const navigate = useNavigate();
   const currentPath = location.pathname;
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const redirect = params.get('redirect');
+
+    if (redirect) {
+      navigate(redirect, { replace: true });
+    }
+  }, [location.search, navigate]);
 
   useEffect(() => {
     document.title =

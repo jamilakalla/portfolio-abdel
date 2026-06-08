@@ -1,62 +1,61 @@
-import SectionHeading from '../components/SectionHeading.jsx';
-import { aboutHighlights, person } from '../data/portfolio.js';
+import { Link } from 'react-router-dom';
+import { person } from '../data/portfolio.js';
 
-export default function About({ onNavigate }) {
+const stats = ['20+ Years of Experience', 'Teams Supervised', 'Premium Interiors', 'Decorative Finishes'];
+const expertise = ['Decorative Painting', 'Gypsum Works', 'Quality Supervision', 'Team Leadership'];
+
+export default function About() {
   return (
-    <>
-      <section className="hero-section about-hero">
-        <div className="section-shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">About</p>
-            <p className="hero-role">{person.title}</p>
-            <h1>Who is Abdellah?</h1>
-            <p className="hero-lede">
-              Senior finishing supervisor for decorative painting, gypsum and premium interiors.
-            </p>
-            <p className="hero-summary">
-              Abdellah Ait Messaoud brings 20+ years of hands-on finishing experience and supervises teams
-              across painting, decorative surfaces, gypsum works and high-end interior delivery.
-            </p>
+    <div className="page page-dark">
+      <section className="lux-hero section-shell">
+        <div className="lux-copy">
+          <p className="eyebrow">About</p>
+          <h1>Who is Abdellah?</h1>
+          <p>
+            Abdellah Ait Messaoud is a senior decorative painting and gypsum finishing supervisor with
+            more than 20 years of hands-on experience in refined interior finishing.
+          </p>
+          <p>
+            His work combines craft, site discipline and team leadership for premium residential,
+            commercial and hospitality interiors.
+          </p>
+          <div className="button-row">
+            <Link className="button button-primary focus-ring" to="/projects">View My Work</Link>
+            <Link className="button button-outline-light focus-ring" to="/contact">Contact Me</Link>
+          </div>
+        </div>
+
+        <div className="image-feature">
+          <img src={person.heroImage} alt="Luxury interior with premium decorative finishes" />
+          <div className="profile-float">
+            <strong>{person.name}</strong>
+            <span>Decorative Finishing Supervisor</span>
+            <span>Based in {person.location}</span>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-ivory">
-        <div className="section-shell two-column">
-          <div>
-            <SectionHeading
-              eyebrow="About"
-              title="A practical finishing supervisor for serious site environments."
-            />
-            <div className="small-stack">
-              <span>{person.location}</span>
-              <span>Availability: {person.availability}</span>
-            </div>
-          </div>
-          <div>
-            <p className="lead-text">
-              Senior finishing professional with over 20 years of experience in decorative painting, mural
-              finishes, gypsum works and premium interior delivery.
-            </p>
-            <div className="body-stack">
-              <p>
-                He combines hands-on technical execution with site supervision, coordinating painting and
-                gypsum teams to deliver clean, consistent and design-aligned finishes.
-              </p>
-              <p>
-                This portfolio is designed for serious employment opportunities with leading construction,
-                fit-out and interior companies, not as a long CV copy.
-              </p>
-              <p>Company names, selected project names and verified references remain à compléter from official project records.</p>
-            </div>
-            <div className="highlight-grid">
-              {aboutHighlights.map((highlight) => (
-                <div key={highlight}>{highlight}</div>
-              ))}
-            </div>
-          </div>
+      <section className="section-shell lux-section">
+        <div className="stat-grid">
+          {stats.map((stat) => <article key={stat} className="stat-card">{stat}</article>)}
         </div>
       </section>
-    </>
+
+      <section className="section-shell lux-section split-panel">
+        <div>
+          <p className="eyebrow">Expertise</p>
+          <h2>Craft. Detail. Excellence.</h2>
+        </div>
+        <div className="expertise-grid">
+          {expertise.map((item) => (
+            <article key={item} className="glass-card">
+              <span />
+              <h3>{item}</h3>
+              <p>Premium execution with disciplined site standards and a refined eye for detail.</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }

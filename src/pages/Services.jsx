@@ -1,52 +1,36 @@
-import SectionHeading from '../components/SectionHeading.jsx';
-import { serviceItems } from '../data/portfolio.js';
+const services = [
+  ['Decorative Painting', 'Elegant painted finishes, feature walls and bespoke surface treatments for luxury interiors.'],
+  ['Gypsum Works', 'Gypsum details, ceilings, partitions and refined finishing for architectural interiors.'],
+  ['Surface Finishes', 'Preparation, repair and premium final surfaces with consistent texture and tone.'],
+  ['Project Supervision', 'Team coordination, quality checks and site delivery support from start to handover.'],
+  ['Renovation & Upgrades', 'Interior upgrades that refresh existing spaces with clean, premium finishing standards.'],
+  ['Consultation', 'Practical finishing guidance for contractors, owners and interior project teams.'],
+];
 
-function TagList({ tags }) {
+export default function Services() {
   return (
-    <div className="tag-list">
-      {tags.map((tag) => (
-        <span key={tag}>{tag}</span>
-      ))}
+    <div className="page page-light">
+      <section className="section-shell page-intro">
+        <p className="eyebrow">Services</p>
+        <h1>What I Offer</h1>
+        <p>High-quality finishing services for premium interiors, delivered with discipline, detail and care.</p>
+      </section>
+
+      <section className="section-shell service-grid">
+        {services.map(([title, description], index) => (
+          <article key={title} className="service-card">
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <h2>{title}</h2>
+            <p>{description}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="section-shell lux-section">
+        <div className="statement-card">
+          <p>"Quality craftsmanship. On-time delivery. Client satisfaction. That's my commitment."</p>
+        </div>
+      </section>
     </div>
-  );
-}
-
-export default function Services({ onNavigate }) {
-  return (
-    <>
-      <section className="hero-section services-hero">
-        <div className="section-shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">Services</p>
-            <h1>What I Offer</h1>
-            <p className="hero-lede">
-              Services for luxury residential, hospitality and premium commercial interiors.
-            </p>
-            <p className="hero-summary">
-              Specialized services in decorative painting, mural effects, gypsum finishing, textured surfaces
-              and premium interior delivery for high-end projects.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-parchment">
-        <div className="section-shell">
-          <SectionHeading
-            eyebrow="Services"
-            title="Services for luxury residential, hospitality and premium commercial interiors."
-          />
-          <div className="card-grid card-grid-two service-grid">
-            {serviceItems.map((service) => (
-              <article key={service.title} className="service-card">
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <TagList tags={service.tags} />
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
   );
 }

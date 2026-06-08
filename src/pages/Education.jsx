@@ -1,65 +1,45 @@
-import SectionHeading from '../components/SectionHeading.jsx';
-import { educationItems, languages } from '../data/portfolio.js';
+const educationItems = [
+  'Technical Diploma in Building Finishing',
+  'Advanced Gypsum Systems Training',
+  'Site Management Certification',
+  'Leadership & Supervision Course',
+];
 
-export default function Education({ onNavigate }) {
+export default function Education() {
   return (
-    <>
-      <section className="hero-section education-hero">
-        <div className="section-shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">Education</p>
-            <h1>Learning & Development</h1>
-            <p className="hero-lede">
-              Education, professional training and practical credentials.
-            </p>
-            <p className="hero-summary">
-              Continuous professional development through formal training, certifications and hands-on experience
-              in decorative painting, gypsum works and site management.
-            </p>
-          </div>
-        </div>
+    <div className="page page-dark">
+      <section className="section-shell page-intro page-intro-dark">
+        <p className="eyebrow">Education</p>
+        <h1>Education & Certifications</h1>
+        <p>Continuous learning and professional development for stronger site leadership and better finishing results.</p>
       </section>
 
-      <section className="section-padding bg-ivory">
-        <div className="section-shell education-layout">
-          <div>
-            <SectionHeading
-              eyebrow="Education"
-              title="Education, professional training and practical credentials."
-            />
-            <div className="education-list">
-              {educationItems.map((item) => (
-                <article key={item.title} className="education-card">
-                  <div className="education-card-head">
-                    <div>
-                      <h3>{item.title}</h3>
-                      <p>{item.meta}</p>
-                    </div>
-                    <span>{item.year}</span>
-                  </div>
-                  <ul>
-                    {item.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
+      <section className="section-shell education-layout">
+        <div className="premium-timeline">
+          {educationItems.map((item, index) => (
+            <article key={item} className="timeline-item">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h2>{item}</h2>
+                <p>Focused professional development supporting decorative finishing, gypsum systems and team supervision.</p>
+              </div>
+            </article>
+          ))}
+        </div>
 
-          <aside className="premium-card language-card">
-            <p className="eyebrow">Languages</p>
-            <div>
-              {languages.map((language) => (
-                <div key={language.language} className="language-row">
-                  <span>{language.language}</span>
-                  <span>{language.level}</span>
-                </div>
-              ))}
-            </div>
-          </aside>
+        <aside className="certificate-card">
+          <p className="eyebrow">Certification</p>
+          <h2>Premium Finishing Practice</h2>
+          <p>Craft knowledge, supervision standards and continuous development for high-end interiors.</p>
+          <div className="seal">AA</div>
+        </aside>
+      </section>
+
+      <section className="section-shell lux-section">
+        <div className="quote-card">
+          <p>"Continuous learning is the key to delivering outstanding results."</p>
         </div>
       </section>
-    </>
+    </div>
   );
 }

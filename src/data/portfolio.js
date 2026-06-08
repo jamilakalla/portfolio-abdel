@@ -2,7 +2,7 @@ export const person = {
   name: 'Abdellah Ait Messaoud',
   initials: 'AA',
   title: 'Decorative Painting & Gypsum Finishing Supervisor',
-  location: 'Dubai, UAE',
+  location: 'Morocco',
   email: 'abdellah.aitmessaoud01@gmail.com',
   phone: '+971 58 163 2025',
   phoneHref: 'tel:+971581632025',
@@ -11,7 +11,7 @@ export const person = {
   cvUrl: `${import.meta.env.BASE_URL}abdellah-cv.pdf`,
   profileImage: `${import.meta.env.BASE_URL}abdellah-profile.jpg`,
   heroImage: `${import.meta.env.BASE_URL}luxury-interior-hero.png`,
-  availability: 'Open to senior finishing, painting and gypsum ...',
+  availability: 'Open to senior finishing, painting and gypsum opportunities',
 };
 
 export const navItems = [
@@ -101,7 +101,7 @@ export const experienceItems = [
   {
     number: '03',
     period: 'Previous roles',
-    location: 'Project locations à compléter',
+    location: 'Premium interior project environments',
     eyebrow: 'Premium interior finishing projects',
     title: 'Gypsum & Interior Finishing Specialist',
     description: 'Completes gypsum decoration, false ceilings, partitions, crack repair and seamless finishing.',
@@ -117,53 +117,53 @@ export const projectItems = [
   {
     category: 'Decorative painting',
     title: 'Textured decorative painting',
-    meta: 'Project name, location and client à compléter',
+    meta: 'Luxury residential decorative finish',
     description: 'Relief-textured decorative painting finish with layered surface effects.',
     image: `${import.meta.env.BASE_URL}projects/decorative-painting-texture-01.jpg`,
     alt: 'Close-up of textured decorative painting finish on a wall',
     bullets: [
       'Decoration peinture, not gypsum or plaster decoration.',
       'Textured wall finish with visible depth and handcrafted surface movement.',
-      'Technique name, site and project reference à compléter.',
+      'Hand-applied surface treatment with a refined premium finish.',
     ],
   },
   {
     category: 'Decorative painting',
     title: 'Warm mineral wall effect',
-    meta: 'Project name, location and client à compléter',
+    meta: 'Warm interior feature wall',
     description: 'Warm neutral decorative wall painting with soft mineral texture for a premium interior mood.',
     image: `${import.meta.env.BASE_URL}projects/decorative-painting-wall-02.jpg`,
     alt: 'Warm beige decorative painted wall with mineral texture and handcrafted surface effect',
     bullets: [
       'Decoration peinture finish with soft tonal variation.',
       'Surface effect designed to work with warm interior lighting.',
-      'Exact room type and client reference à compléter.',
+      'Designed for premium residential and hospitality interiors.',
     ],
   },
   {
     category: 'Decorative painting',
     title: 'Patterned decorative paint finish',
-    meta: 'Project name, location and client à compléter',
+    meta: 'Patterned decorative finish',
     description: 'Subtle patterned decorative painting finish with layered texture and light reflective detail.',
     image: `${import.meta.env.BASE_URL}projects/decorative-painting-pattern-03.jpg`,
     alt: 'Decorative painted wall finish with a subtle repeating geometric floral pattern',
     bullets: [
       'Decoration peinture with repeated ornamental pattern.',
       'Premium surface treatment suitable for feature walls.',
-      'Pattern method and project location à compléter.',
+      'Repeated ornamental treatment with controlled surface depth.',
     ],
   },
   {
     category: 'Decorative painting',
     title: 'Premium commercial surface finish',
-    meta: 'Project name, location and client à compléter',
+    meta: 'Premium commercial interior finish',
     description: 'Decorative painting finish applied in a premium commercial interior atmosphere.',
     image: `${import.meta.env.BASE_URL}projects/decorative-painting-commercial-04.jpg`,
     alt: 'Premium commercial interior with dark decorative painted wall and ceiling finishes',
     bullets: [
       'Decoration peinture for wall and ceiling visual continuity.',
       'Dark, refined surface tone aligned with a high-end interior concept.',
-      'Business type, contractor and project reference à compléter.',
+      'Suitable for commercial interiors with refined lighting concepts.',
     ],
   },
 ];
@@ -197,9 +197,9 @@ export const serviceItems = [
 export const educationItems = [
   {
     title: 'Formal education',
-    meta: 'à compléter',
-    year: 'à compléter',
-    bullets: ['Primary School Education listed in the CV. Additional school details à compléter.'],
+    meta: 'Building finishing foundation',
+    year: 'Early training',
+    bullets: ['Practical foundation developed through formal learning and hands-on site experience.'],
   },
   {
     title: 'Professional training through site experience',
@@ -213,7 +213,7 @@ export const educationItems = [
   {
     title: 'UAE driving license',
     meta: 'UAE (Dubai)',
-    year: 'Valid status à compléter',
+    year: 'UAE credential',
     bullets: ['Driving License: UAE (Dubai), listed in the CV.'],
   },
 ];

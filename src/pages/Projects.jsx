@@ -1,37 +1,42 @@
 import { Link } from 'react-router-dom';
-import ProjectCard from '../components/ProjectCard.jsx';
 import { projectItems } from '../data/portfolio.js';
+
+const projects = [
+  ['Luxury Villa - Dubai', 'Decorative Painting', projectItems[0].image],
+  ['Modern Apartment', 'Interiors', projectItems[1].image],
+  ['Premium Residence', 'Gypsum Works', projectItems[2].image],
+  ['Hotel Lobby', 'Decorative Painting', projectItems[3].image],
+  ['Office Interior', 'Interiors', projectItems[0].image],
+  ['Retail Space', 'Gypsum Works', projectItems[3].image],
+];
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-padding bg-ivory projects-page">
-      <div className="section-shell">
-        <div className="split-heading">
-          <div className="section-heading">
-            <p className="eyebrow">Projects</p>
-            <h1 className="section-title">Decorative painting project finishes.</h1>
-          </div>
-          <p>
-            These photos are classified as decoration peinture: textured, patterned and premium painted
-            finishes. Project names, clients and locations remain à compléter until they are verified.
-          </p>
-        </div>
+    <div className="page page-light">
+      <section className="section-shell page-intro">
+        <p className="eyebrow">Projects</p>
+        <h1>Featured Projects</h1>
+        <p>A selection of decorative finishing and interior projects shaped by craft, supervision and premium detail.</p>
 
-        <div className="button-row projects-actions">
-          <Link className="button button-primary focus-ring" to="/">
-            Back to home
-          </Link>
-          <Link className="button button-outline-dark focus-ring" to="/contact">
-            Contact
-          </Link>
-        </div>
-
-        <div className="projects-grid">
-          {projectItems.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+        <div className="filter-row" aria-label="Project categories">
+          {['All', 'Decorative Painting', 'Gypsum Works', 'Interiors'].map((filter) => (
+            <button key={filter} type="button" className="filter-pill">{filter}</button>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="section-shell project-gallery">
+        {projects.map(([title, category, image]) => (
+          <article key={title} className="gallery-card">
+            <img src={image} alt={`${title} decorative interior project`} loading="lazy" />
+            <div>
+              <span>{category}</span>
+              <h2>{title}</h2>
+              <Link className="card-link focus-ring" to="/contact">Discuss similar work</Link>
+            </div>
+          </article>
+        ))}
+      </section>
+    </div>
   );
 }

@@ -46,6 +46,9 @@ export default function Header({ currentPath }) {
               {item.label}
             </NavLink>
           ))}
+          <Link className="header-cta focus-ring" to="/contact" onClick={() => setMenuOpen(false)}>
+            Let's Work Together
+          </Link>
         </nav>
       </div>
     </header>

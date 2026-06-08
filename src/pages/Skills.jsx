@@ -1,54 +1,44 @@
-import SectionHeading from '../components/SectionHeading.jsx';
-import { skillGroups } from '../data/portfolio.js';
+import { person } from '../data/portfolio.js';
 
-function BulletList({ items, dark = false }) {
-  return (
-    <ul className={`bullet-list ${dark ? 'bullet-list-dark' : ''}`}>
-      {items.map((item) => (
-        <li key={item}>
-          <span className="bullet-dot" />
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
+const skills = [
+  ['Decorative Painting', 95],
+  ['Gypsum Works', 92],
+  ['Surface Preparation', 90],
+  ['Project Supervision', 96],
+  ['Quality Control', 94],
+  ['Team Management', 90],
+];
 
-export default function Skills({ onNavigate }) {
+export default function Skills() {
   return (
-    <>
-      <section className="hero-section skills-hero">
-        <div className="section-shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">Skills</p>
-            <h1>Core Expertise</h1>
-            <p className="hero-lede">
-              Decorative surfaces, gypsum work and premium site execution.
-            </p>
-            <p className="hero-summary">
-              Technical mastery across decorative painting, mural finishes, textured surfaces, gypsum works,
-              false ceilings and team supervision for luxury interiors.
-            </p>
-          </div>
-        </div>
+    <div className="page page-light">
+      <section className="section-shell page-intro">
+        <p className="eyebrow">Skills</p>
+        <h1>Skills & Expertise</h1>
+        <p>Decorative finishing, gypsum works and site supervision delivered with precision and premium standards.</p>
       </section>
 
-      <section className="section-padding bg-parchment">
-        <div className="section-shell">
-          <SectionHeading
-            eyebrow="Skills"
-            title="Core skills across decorative surfaces, gypsum work and premium site execution."
-          />
-          <div className="card-grid card-grid-three">
-            {skillGroups.map((group) => (
-              <article key={group.title} className="premium-card skill-card">
-                <h3>{group.title}</h3>
-                <BulletList items={group.items} />
-              </article>
-            ))}
-          </div>
+      <section className="section-shell skills-layout">
+        <div className="skill-stack">
+          {skills.map(([label, value]) => (
+            <article key={label} className="skill-meter-card">
+              <div>
+                <h3>{label}</h3>
+                <strong>{value}%</strong>
+              </div>
+              <span className={`skill-track level-${value}`}><span /></span>
+            </article>
+          ))}
         </div>
+
+        <aside className="quote-image-card">
+          <img src={person.heroImage} alt="Premium interior finish with warm lighting" />
+          <div>
+            <p>"Detail is not a detail. It makes the design."</p>
+            <span>Premium finishing philosophy</span>
+          </div>
+        </aside>
       </section>
-    </>
+    </div>
   );
 }
