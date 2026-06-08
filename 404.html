@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdellah Ait Messaoud Portfolio</title>
+    <script>
+      var base = '/portfolio-abdel';
+      var path = window.location.pathname;
+      var next = base + '/?redirect=' + encodeURIComponent(path.replace(base, '') + window.location.search + window.location.hash);
+      window.location.replace(next);
+    </script>
+  </head>
+  <body></body>
+</html>
