@@ -586,6 +586,17 @@ ul {
   margin-top: 2rem;
 }
 
+.project-image-wrap {
+  display: block;
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .filter-pill {
   min-height: 42px;
   padding: 0 1rem;
@@ -778,6 +789,16 @@ ul {
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--gold);
+}
+
+.contact-submit {
+  width: 100%;
+  margin-top: 1.5rem;
+  border: 0;
+}
+
+.contact-submit:hover {
+  background: var(--gold-soft);
 }
 
 .site-footer {

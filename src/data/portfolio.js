@@ -2,7 +2,7 @@ export const person = {
   name: 'Abdellah Ait Messaoud',
   initials: 'AA',
   title: 'Decorative Painting & Gypsum Finishing Supervisor',
-  location: 'Morocco',
+  location: 'Dubai',
   email: 'abdellah.aitmessaoud01@gmail.com',
   phone: '+971 58 163 2025',
   phoneHref: 'tel:+971581632025',
@@ -21,7 +21,6 @@ export const navItems = [
   { label: 'Experience', href: '/experience' },
   { label: 'Projects', href: '/projects' },
   { label: 'Services', href: '/services' },
-  { label: 'Education', href: '/education' },
 ];
 
 export const heroStats = [
@@ -163,6 +162,45 @@ export const projectItems = [
       'Decoration peinture for wall and ceiling visual continuity.',
       'Dark, refined surface tone aligned with a high-end interior concept.',
       'Suitable for commercial interiors with refined lighting concepts.',
+    ],
+  },
+  {
+    category: 'Interiors',
+    title: 'Decorative Interior Finish',
+    meta: 'Premium interior finish',
+    description: 'Premium decorative painting and finishing work for an interior space.',
+    image: `${import.meta.env.BASE_URL}project-7.jpg`,
+    alt: 'Decorative interior finish with premium painted surfaces',
+    bullets: [
+      'Premium decorative painting and finishing work for interiors.',
+      'Attention to detail in surface quality and refined finishes.',
+      'Delivered for architecturally driven interior spaces.',
+    ],
+  },
+  {
+    category: 'Gypsum Works',
+    title: 'Gypsum & Ceiling Detail',
+    meta: 'Gypsum decoration and ceiling finish',
+    description: 'Gypsum decoration and ceiling finishing with clean execution and attention to detail.',
+    image: `${import.meta.env.BASE_URL}project-8.jpg`,
+    alt: 'Gypsum ceiling detail with clean decorative finishing',
+    bullets: [
+      'Gypsum decoration and ceiling finishing with sharp detailing.',
+      'Clean execution tailored for premium interior ceilings.',
+      'Focused on quality control and finishing standards.',
+    ],
+  },
+  {
+    category: 'Decorative painting',
+    title: 'Premium Wall Finish',
+    meta: 'Refined decorative wall surface',
+    description: 'High-quality wall finishing and decorative surface work for a refined interior look.',
+    image: `${import.meta.env.BASE_URL}project-9.jpg`,
+    alt: 'Premium decorative wall finish with refined surface texture',
+    bullets: [
+      'High-quality wall finishing for refined interiors.',
+      'Decorative surface work with premium material selection.',
+      'Designed to complement luxury interior environments.',
     ],
   },
 ];

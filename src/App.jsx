@@ -8,7 +8,6 @@ import Skills from './pages/Skills.jsx';
 import Experience from './pages/Experience.jsx';
 import Projects from './pages/Projects.jsx';
 import Services from './pages/Services.jsx';
-import Education from './pages/Education.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import { person } from './data/portfolio.js';
 
@@ -38,8 +37,6 @@ export default function App() {
         ? `Experience | ${person.name}`
         : currentPath === '/services'
         ? `Services | ${person.name}`
-        : currentPath === '/education'
-        ? `Education | ${person.name}`
         : currentPath === '/contact'
         ? `Contact | ${person.name}`
         : `${person.name} | Decorative Gypsum & Mural Painting Specialist`;
@@ -58,7 +55,6 @@ export default function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Home />} />
         </Routes>

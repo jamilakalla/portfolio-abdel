@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
-import { heroStats, person } from '../data/portfolio.js';
+import { person } from '../data/portfolio.js';
+
+const homeStats = [
+  { value: '20+', label: 'years of professional experience' },
+  { value: 'Supervisor', label: 'of painting and gypsum teams' },
+  { value: 'Dubai / UAE', label: 'based' },
+];
 
 export default function Home() {
   return (
@@ -14,8 +20,8 @@ export default function Home() {
 
         <div className="section-shell hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Open to opportunities with leading construction and interior companies</p>
-            <p className="hero-role">{person.title}</p>
+            <p className="eyebrow">Open to senior finishing roles in Dubai / UAE</p>
+            <p className="hero-role">Senior Finishing Supervisor for Decorative Painting, Gypsum & Premium Interiors</p>
             <h1>{person.name}</h1>
             <div className="mobile-hero-portrait" aria-label={`Professional portrait of ${person.name}`}>
               <div className="mobile-portrait-frame">
@@ -27,11 +33,11 @@ export default function Home() {
               </div>
             </div>
             <p className="hero-lede">
-              Senior finishing supervisor for decorative painting, gypsum and premium interiors.
+              Senior Finishing Supervisor for Decorative Painting, Gypsum & Premium Interiors.
             </p>
             <p className="hero-summary">
-              Abdellah Ait Messaoud brings 20+ years of hands-on finishing experience and supervises teams
-              across painting, decorative surfaces, gypsum works and high-end interior delivery.
+              20+ years of hands-on experience delivering high-end decorative finishes, gypsum works, mural
+              painting and premium interior details for residential, commercial and luxury spaces.
             </p>
             <div className="button-row">
               <Link className="button button-primary focus-ring" to="/contact">
@@ -62,7 +68,7 @@ export default function Home() {
 
         <div className="section-shell hero-stats-shell">
           <div className="hero-stats">
-            {heroStats.map((stat) => (
+            {homeStats.map((stat) => (
               <div key={stat.label} className="stat-cell">
                 <p>{stat.value}</p>
                 <span>{stat.label}</span>

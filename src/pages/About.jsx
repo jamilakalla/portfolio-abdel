@@ -1,23 +1,38 @@
 import { Link } from 'react-router-dom';
 import { person } from '../data/portfolio.js';
 
-const stats = ['20+ Years of Experience', 'Teams Supervised', 'Premium Interiors', 'Decorative Finishes'];
-const expertise = ['Decorative Painting', 'Gypsum Works', 'Quality Supervision', 'Team Leadership'];
-
+const stats = [
+  'Decorative painting and premium wall finishes',
+  'Gypsum works, false ceilings and interior detailing',
+  'Team supervision and site coordination',
+  'Quality control and finishing standards',
+];
+const expertise = [
+  'Decorative Painting',
+  'Gypsum Works',
+  'Team Leadership',
+  'Quality Supervision',
+];
 export default function About() {
   return (
     <div className="page page-dark">
       <section className="lux-hero section-shell">
         <div className="lux-copy">
-          <p className="eyebrow">About</p>
-          <h1>Who is Abdellah?</h1>
-          <p>
-            Abdellah Ait Messaoud is a senior decorative painting and gypsum finishing supervisor with
-            more than 20 years of hands-on experience in refined interior finishing.
+<p className="eyebrow" style={{ fontSize: "1.1rem", marginBottom: "1.2rem" }}>
+  ABOUT
+</p>          <p>
+            Abdellah Ait Messaoud is a senior finishing supervisor with more than 20 years of practical
+            experience in decorative painting, gypsum works, mural painting and premium interior finishes.
           </p>
           <p>
-            His work combines craft, site discipline and team leadership for premium residential,
-            commercial and hospitality interiors.
+            He combines hands-on technical knowledge with site supervision, team coordination and
+            attention to detail. His work focuses on clean execution, high-quality finishing, respect
+            for project specifications and smooth coordination between workers, clients and site teams.
+          </p>
+          <p>
+            Based in the UAE and seeking senior opportunities in Dubai, Abdellah brings strong field
+            experience across painting, decorative surfaces, gypsum decoration, false ceilings and
+            luxury interior delivery.
           </p>
           <div className="button-row">
             <Link className="button button-primary focus-ring" to="/projects">View My Work</Link>
@@ -30,7 +45,7 @@ export default function About() {
           <div className="profile-float">
             <strong>{person.name}</strong>
             <span>Decorative Finishing Supervisor</span>
-            <span>Based in {person.location}</span>
+            <span>Based in the UAE</span>
           </div>
         </div>
       </section>
@@ -51,7 +66,15 @@ export default function About() {
             <article key={item} className="glass-card">
               <span />
               <h3>{item}</h3>
-              <p>Premium execution with disciplined site standards and a refined eye for detail.</p>
+              <p>
+                {item === 'Decorative Painting'
+                  ? 'High-end wall finishes, murals and premium painted surfaces.'
+                  : item === 'Gypsum Works'
+                  ? 'Gypsum decoration, false ceilings and interior detailing with clean handover.'
+                  : item === 'Team Leadership'
+                  ? 'Supervises site teams, coordinates trades and maintains execution discipline.'
+                  : 'Ensures project specifications, finish quality and delivery standards.'}
+              </p>
             </article>
           ))}
         </div>
