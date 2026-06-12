@@ -44,13 +44,16 @@ export default function Home() {
                 Contact for opportunities
               </Link>
               <a
-                className="button button-outline-light focus-ring"
-                href="mailto:abdellah.aitmessaoud01@gmail.com?subject=Project%20Brief&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20send%20you%20a%20project%20brief.%0D%0A%0D%0AProject%20Name:%0D%0AProject%20Type:%0D%0ABudget:%0D%0ADeadline:%0D%0ADetails:%0D%0A"
+                className="button button-primary"
+                href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=abdellah.aitmessaoud01@gmail.com&su=Project%20Brief%20Inquiry&body=Hello%20Abdellah,%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20send%20you%20a%20project%20brief.%0D%0A%0D%0AProject%20type:%0D%0ALocation:%0D%0AScope%20of%20work:%0D%0ATimeline:%0D%0ABudget%20range:%0D%0A%0D%0ABest%20regards,"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Send Project Brief
               </a>
-              <a className="button button-outline-light focus-ring" href={person.cvUrl}>
+              <a className="button button-primary focus-ring" href={person.cvUrl}>
                 View CV
+
               </a>
             </div>
           </div>

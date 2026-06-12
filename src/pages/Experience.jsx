@@ -11,7 +11,6 @@ export default function Experience() {
   return (
     <div className="page page-dark">
       <section className="section-shell page-intro page-intro-dark">
-        <p className="eyebrow">Experience</p>
         <h1>Work Experience</h1>
         <p>20+ years of hands-on experience in high-end interiors, decorative painting, gypsum works and site supervision.</p>
       </section>

@@ -13,7 +13,11 @@ export default function Header({ currentPath }) {
     <header className="site-header">
       <div className="section-shell header-shell">
         <Link className="brand-link focus-ring" to="/" aria-label="Back to top" onClick={() => setMenuOpen(false)}>
-          <span className="brand-mark">{person.initials}</span>
+          <img
+            src="/portfolio-abdel/projects/abdo-logo.png"
+            alt="Abdellah Ait Messaoud logo"
+            className="brand-logo"
+          />
           <span className="brand-name">{person.name}</span>
         </Link>
 

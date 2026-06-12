@@ -11,7 +11,6 @@ export default function Services() {
   return (
     <div className="page page-light">
       <section className="section-shell page-intro">
-        <p className="eyebrow">Services</p>
         <h1>What I Offer</h1>
         <p>High-quality finishing services for premium interiors, delivered with discipline, detail and care.</p>
       </section>

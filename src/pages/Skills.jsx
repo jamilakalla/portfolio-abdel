@@ -13,7 +13,6 @@ export default function Skills() {
   return (
     <div className="page page-light">
       <section className="section-shell page-intro">
-        <p className="eyebrow">Skills</p>
         <h1>Skills & Expertise</h1>
         <p>Decorative finishing, gypsum works and site supervision delivered with precision and premium standards.</p>
       </section>

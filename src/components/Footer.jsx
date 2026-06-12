@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { person } from '../data/portfolio.js';
 
 export default function Footer() {
@@ -7,15 +6,18 @@ export default function Footer() {
       <div className="section-shell footer-shell">
         <p>© 2026 {person.name}. Decorative gypsum, mural painting and luxury interior finishes.</p>
         <div className="footer-links">
-          <a className="focus-ring" href={person.linkedin}>
+          <a className="focus-ring" href={person.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a className="focus-ring" href={`mailto:${person.email}`}>
-            Email
+          <a className="focus-ring" href="https://www.instagram.com/abdellahdecorativepaint/" target="_blank" rel="noopener noreferrer">
+            Instagram
           </a>
-          <Link className="focus-ring" to="/">
+          <a className="focus-ring" href="FACEBOOK_PAGE_LINK_HERE" target="_blank" rel="noopener noreferrer">
+            Facebook
+          </a>
+          <a className="focus-ring footer-back-top" href="#top">
             Back to top
-          </Link>
+          </a>
         </div>
       </div>
     </footer>

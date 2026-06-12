@@ -17,9 +17,9 @@ export default function Projects() {
   return (
     <div className="page page-light">
       <section className="section-shell page-intro">
-        <p className="eyebrow">Projects</p>
         <h1>Featured Projects</h1>
-        <p>A selection of decorative finishing and interior projects shaped by craft, supervision and premium detail.</p>
+        
+        <p className="projects-heading-copy">A selection of decorative finishing and interior projects shaped by craft, supervision and premium detail.</p>
 
         <div className="filter-row" aria-label="Project categories">
           {['All', 'Decorative Painting', 'Gypsum Works', 'Interiors'].map((filter) => (

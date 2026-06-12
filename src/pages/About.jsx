@@ -1,12 +1,6 @@
 import { Link } from 'react-router-dom';
 import { person } from '../data/portfolio.js';
 
-const stats = [
-  'Decorative painting and premium wall finishes',
-  'Gypsum works, false ceilings and interior detailing',
-  'Team supervision and site coordination',
-  'Quality control and finishing standards',
-];
 const expertise = [
   'Decorative Painting',
   'Gypsum Works',
@@ -18,25 +12,22 @@ export default function About() {
     <div className="page page-dark">
       <section className="lux-hero section-shell">
         <div className="lux-copy">
-<p className="eyebrow" style={{ fontSize: "1.1rem", marginBottom: "1.2rem" }}>
-  ABOUT
-</p>          <p>
-            Abdellah Ait Messaoud is a senior finishing supervisor with more than 20 years of practical
-            experience in decorative painting, gypsum works, mural painting and premium interior finishes.
+          <h1 className="section-title section-title-light">About My Work</h1>
+          <p>
+            I am Abdellah Ait Messaoud, a Senior Decorative Gypsum and Mural Painting Specialist with over 20 years of hands-on experience in luxury interior finishing.
           </p>
           <p>
-            He combines hands-on technical knowledge with site supervision, team coordination and
-            attention to detail. His work focuses on clean execution, high-quality finishing, respect
-            for project specifications and smooth coordination between workers, clients and site teams.
+            My work focuses on decorative and mural painting, textured wall finishes, premium surface treatments, gypsum decoration, false ceilings and detailed interior finishing works. I have worked on residential, hospitality and commercial projects across the UAE, Qatar, Saudi Arabia and Morocco.
           </p>
           <p>
-            Based in the UAE and seeking senior opportunities in Dubai, Abdellah brings strong field
-            experience across painting, decorative surfaces, gypsum decoration, false ceilings and
-            luxury interior delivery.
+            I combine practical site experience with strong attention to detail, quality control and the ability to follow architectural drawings and design specifications. I work closely with architects, interior designers, project managers and contractors to deliver clean, precise and high-quality finishes.
+          </p>
+          <p>
+            Based in the UAE and available for senior opportunities in Dubai, I am committed to delivering professional finishing work with reliability, precision and respect for project deadlines.
           </p>
           <div className="button-row">
             <Link className="button button-primary focus-ring" to="/projects">View My Work</Link>
-            <Link className="button button-outline-light focus-ring" to="/contact">Contact Me</Link>
+            <Link className="button button-primary focus-ring" to="/contact">Contact Me</Link>
           </div>
         </div>
 
@@ -47,12 +38,6 @@ export default function About() {
             <span>Decorative Finishing Supervisor</span>
             <span>Based in the UAE</span>
           </div>
-        </div>
-      </section>
-
-      <section className="section-shell lux-section">
-        <div className="stat-grid">
-          {stats.map((stat) => <article key={stat} className="stat-card">{stat}</article>)}
         </div>
       </section>
 
