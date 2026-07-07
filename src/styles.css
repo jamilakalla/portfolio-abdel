@@ -607,6 +607,20 @@ ul {
   margin-top: 2rem;
 }
 
+.view-more-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.view-more-button {
+  min-width: 280px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+}
+
 .project-image-wrap {
   display: block;
   cursor: pointer;

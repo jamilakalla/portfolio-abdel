@@ -20,12 +20,9 @@ export default function Projects() {
         
         <p className="projects-heading-copy">A selection of decorative finishing and interior projects shaped by craft, supervision and premium detail.</p>
 
-        <div className="filter-row" aria-label="Project categories">
-          {['All', 'Decorative Painting', 'Gypsum Works', 'Interiors'].map((filter) => (
-            <button key={filter} type="button" className="filter-pill">{filter}</button>
-          ))}
+        <div className="view-more-section" aria-label="View more projects">
           <a
-            className="button button-primary focus-ring"
+            className="button button-primary focus-ring view-more-button"
             href="https://drive.google.com/drive/folders/10gz6gdFWttGh4YPYZpmn21_XyqJR_2qo?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
