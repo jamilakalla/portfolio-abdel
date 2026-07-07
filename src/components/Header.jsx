@@ -14,7 +14,7 @@ export default function Header({ currentPath }) {
       <div className="section-shell header-shell">
         <Link className="brand-link focus-ring" to="/" aria-label="Back to top" onClick={() => setMenuOpen(false)}>
           <img
-            src="/portfolio-abdel/projects/abdo-logo.png"
+            src={`${import.meta.env.BASE_URL}projects/abdo-logo.png`}
             alt="Abdellah Ait Messaoud logo"
             className="brand-logo"
           />
