@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
 import { projectItems } from '../data/portfolio.js';
 
 const projects = [
   ['Luxury Villa - Dubai', 'Decorative Painting', projectItems[0].image],
-  ['Modern Apartment', 'Interiors', projectItems[1].image],
-  ['Premium Residence', 'Gypsum Works', projectItems[2].image],
+  ['Modern Apartment', 'Decorative Painting', projectItems[1].image],
+  ['Premium Residence', 'Decorative Painting', projectItems[2].image],
   ['Hotel Lobby', 'Decorative Painting', projectItems[3].image],
-  ['Office Interior', 'Interiors', projectItems[0].image],
-  ['Retail Space', 'Gypsum Works', projectItems[3].image],
-  ['Decorative Interior Finish', 'Interiors', projectItems[4].image],
-  ['Gypsum & Ceiling Detail', 'Gypsum Works', projectItems[5].image],
-  ['Premium Wall Finish', 'Decorative Painting', projectItems[6].image],
+  ['Office Interior', 'Interiors', projectItems[4].image],
+  ['Retail Space', 'Gypsum Works', projectItems[5].image],
+  ['Gypsum & Ceiling Detail', 'Gypsum Works', projectItems[6].image],
+  ['Artistic Gypsum Detailing', 'Gypsum Works', projectItems[7].image],
+  ['Modern Interior Finishing', 'Interiors', projectItems[8].image],
 ];
 
 export default function Projects() {
@@ -27,7 +26,7 @@ export default function Projects() {
           ))}
           <a
             className="button button-primary focus-ring"
-            href="https://drive.google.com/drive/folders/PASTE_YOUR_DRIVE_FOLDER_LINK_HERE"
+            href="https://drive.google.com/drive/folders/10gz6gdFWttGh4YPYZpmn21_XyqJR_2qo?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -63,11 +62,6 @@ export default function Projects() {
                 alt={`${title} decorative interior project`}
                 loading="lazy"
               />
-            </div>
-            <div>
-              <span>{category}</span>
-              <h2>{title}</h2>
-              <Link className="card-link focus-ring" to="/contact">Discuss similar work</Link>
             </div>
           </article>
         ))}

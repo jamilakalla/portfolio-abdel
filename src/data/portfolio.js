@@ -117,7 +117,7 @@ export const projectItems = [
     title: 'Textured decorative painting',
     meta: 'Luxury residential decorative finish',
     description: 'Relief-textured decorative painting finish with layered surface effects.',
-    image: `${import.meta.env.BASE_URL}projects/decorative-painting-texture-01.jpg`,
+    image: `${import.meta.env.BASE_URL}image/al1.jpg`,
     alt: 'Close-up of textured decorative painting finish on a wall',
     bullets: [
       'Decoration peinture, not gypsum or plaster decoration.',
@@ -130,7 +130,7 @@ export const projectItems = [
     title: 'Warm mineral wall effect',
     meta: 'Warm interior feature wall',
     description: 'Warm neutral decorative wall painting with soft mineral texture for a premium interior mood.',
-    image: `${import.meta.env.BASE_URL}projects/decorative-painting-wall-02.jpg`,
+    image: `${import.meta.env.BASE_URL}image/COF.png`,
     alt: 'Warm beige decorative painted wall with mineral texture and handcrafted surface effect',
     bullets: [
       'Decoration peinture finish with soft tonal variation.',
@@ -143,7 +143,7 @@ export const projectItems = [
     title: 'Patterned decorative paint finish',
     meta: 'Patterned decorative finish',
     description: 'Subtle patterned decorative painting finish with layered texture and light reflective detail.',
-    image: `${import.meta.env.BASE_URL}projects/decorative-painting-pattern-03.jpg`,
+    image: `${import.meta.env.BASE_URL}image/ess1.jpg`,
     alt: 'Decorative painted wall finish with a subtle repeating geometric floral pattern',
     bullets: [
       'Decoration peinture with repeated ornamental pattern.',
@@ -156,7 +156,7 @@ export const projectItems = [
     title: 'Premium commercial surface finish',
     meta: 'Premium commercial interior finish',
     description: 'Decorative painting finish applied in a premium commercial interior atmosphere.',
-    image: `${import.meta.env.BASE_URL}projects/decorative-painting-commercial-04.jpg`,
+    image: `${import.meta.env.BASE_URL}image/IMG8.webp`,
     alt: 'Premium commercial interior with dark decorative painted wall and ceiling finishes',
     bullets: [
       'Decoration peinture for wall and ceiling visual continuity.',
@@ -169,7 +169,7 @@ export const projectItems = [
     title: 'Decorative Interior Finish',
     meta: 'Premium interior finish',
     description: 'Premium decorative painting and finishing work for an interior space.',
-    image: `${import.meta.env.BASE_URL}project-7.jpg`,
+    image: `${import.meta.env.BASE_URL}image/IMG_1421.jpg`,
     alt: 'Decorative interior finish with premium painted surfaces',
     bullets: [
       'Premium decorative painting and finishing work for interiors.',
@@ -182,7 +182,7 @@ export const projectItems = [
     title: 'Gypsum & Ceiling Detail',
     meta: 'Gypsum decoration and ceiling finish',
     description: 'Gypsum decoration and ceiling finishing with clean execution and attention to detail.',
-    image: `${import.meta.env.BASE_URL}project-8.jpg`,
+    image: `${import.meta.env.BASE_URL}image/IMG_2304.jpg`,
     alt: 'Gypsum ceiling detail with clean decorative finishing',
     bullets: [
       'Gypsum decoration and ceiling finishing with sharp detailing.',
@@ -195,12 +195,38 @@ export const projectItems = [
     title: 'Premium Wall Finish',
     meta: 'Refined decorative wall surface',
     description: 'High-quality wall finishing and decorative surface work for a refined interior look.',
-    image: `${import.meta.env.BASE_URL}project-9.jpg`,
+    image: `${import.meta.env.BASE_URL}image/cof abd.JPG`,
     alt: 'Premium decorative wall finish with refined surface texture',
     bullets: [
       'High-quality wall finishing for refined interiors.',
       'Decorative surface work with premium material selection.',
       'Designed to complement luxury interior environments.',
+    ],
+  },
+  {
+    category: 'Gypsum Works',
+    title: 'Artistic Gypsum Detailing',
+    meta: 'Decorative gypsum work',
+    description: 'Detailed gypsum decoration work with artistic surface treatment and refined finishing.',
+    image: `${import.meta.env.BASE_URL}image/DECO.jpeg`,
+    alt: 'Artistic gypsum detailing with decorative surface work',
+    bullets: [
+      'Decorative gypsum works with artistic surface treatment.',
+      'Premium gypsum detail suitable for feature walls and ceilings.',
+      'Clean execution and refined finishing standards.',
+    ],
+  },
+  {
+    category: 'Interiors',
+    title: 'Modern Interior Finishing',
+    meta: 'Contemporary interior design finishing',
+    description: 'Contemporary interior finishing with modern surface treatments and quality detailing.',
+    image: `${import.meta.env.BASE_URL}image/WALL.jpeg`,
+    alt: 'Modern interior finishing with contemporary surface treatment',
+    bullets: [
+      'Contemporary interior finishing with refined surface treatments.',
+      'Modern design approach with premium material selection.',
+      'Quality control and detailed finishing execution.',
     ],
   },
 ];

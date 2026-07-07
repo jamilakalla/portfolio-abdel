@@ -1158,6 +1158,7 @@ ul {
   .hero-grid {
     min-height: auto;
     padding-top: 7rem;
+    min-height: 500px;
   }
 
   .mobile-hero-portrait {
@@ -1214,3 +1215,10 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
