@@ -8,7 +8,7 @@ export const person = {
   phoneHref: 'tel:+971581632025',
   linkedin: 'https://www.linkedin.com/in/abdellah-ait-messaoud-478a57213/',
   linkedinLabel: 'abdellah-ait-messaoud',
-  cvUrl: '/abdellah-cv.pdf',
+  cvUrl: '/abdellahcv.pdf',
   profileImage: `${import.meta.env.BASE_URL}abdellah-profile.jpg`,
   heroImage: `${import.meta.env.BASE_URL}luxury-interior-hero.png`,
   availability: 'Open to senior finishing, painting and gypsum opportunities',

@@ -53,7 +53,7 @@ export default function Home() {
               </a>
               <a
                 className="button button-primary focus-ring"
-                href="/abdellah-cv.pdf"
+                href="/abdellahcv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
