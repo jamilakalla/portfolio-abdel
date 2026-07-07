@@ -53,10 +53,9 @@ export default function Home() {
               </a>
               <a
                 className="button button-primary focus-ring"
-                href={person.cvUrl}
+                href="/abdellah-cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download
               >
                 View CV
               </a>
