@@ -51,9 +51,14 @@ export default function Home() {
               >
                 Send Project Brief
               </a>
-              <a className="button button-primary focus-ring" href={person.cvUrl}>
+              <a
+                className="button button-primary focus-ring"
+                href={person.cvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
                 View CV
-
               </a>
             </div>
           </div>

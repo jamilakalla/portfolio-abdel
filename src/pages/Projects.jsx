@@ -36,7 +36,7 @@ export default function Projects() {
         {projects.map(([title, category, image]) => (
           <article key={title} className="gallery-card">
             <div
-              className="project-image-wrap"
+              className="project-image-wrap project-gallery-media"
               role="button"
               tabIndex={0}
               onClick={(event) => {

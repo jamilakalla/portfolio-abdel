@@ -1,7 +1,7 @@
 export default function ProjectCard({ project }) {
   return (
     <article className="premium-card project-card">
-      <div className="project-image-wrap">
+      <div className="project-image-wrap project-card-media">
         <img className="project-image" src={project.image} alt={project.alt} loading="lazy" />
       </div>
       <div className="project-content">

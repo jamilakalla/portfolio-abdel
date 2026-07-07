@@ -622,14 +622,32 @@ ul {
 }
 
 .project-image-wrap {
+  position: relative;
   display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: inherit;
   cursor: pointer;
+  background: rgba(8, 8, 8, 0.06);
 }
 
 .project-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-card-media {
+  aspect-ratio: 4 / 3;
+  min-height: 240px;
+}
+
+.project-gallery-media {
+  min-height: 100%;
 }
 
 .filter-pill {
@@ -654,6 +672,7 @@ ul {
   min-height: 360px;
   border: 1px solid var(--line-light);
   background: var(--white);
+  overflow: hidden;
 }
 
 .gallery-card img {
@@ -671,13 +690,11 @@ ul {
   background: linear-gradient(180deg, transparent 30%, rgba(8, 8, 8, 0.82));
 }
 
-.gallery-card > div {
+.gallery-card > .project-image-wrap {
   position: absolute;
-  left: 1.25rem;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  z-index: 1;
-  color: var(--white);
+  inset: 0;
+  z-index: 0;
+  min-height: 100%;
 }
 
 .gallery-card span {
@@ -1223,6 +1240,12 @@ ul {
 
   .hero-copy .button-row {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-copy .button-row .button {
+    width: 100%;
+    min-width: 0;
   }
 
   .hero-stats {
