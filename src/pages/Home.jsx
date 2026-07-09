@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import { person } from '../data/portfolio.js';
 
 const homeStats = [
-  { value: '20+', label: 'years of professional experience' },
-  { value: 'Supervisor', label: 'of painting and gypsum teams' },
-  { value: 'Dubai / UAE', label: 'based' },
+  { value: '20+', label: 'Years of professional experience' },
+  { value: 'Supervisor', label: 'Interior fit-out, gypsum & finishing teams' },
+  { value: 'Dubai / UAE', label: 'Based & open to international opportunities' },
 ];
 
 export default function Home() {
@@ -20,37 +20,31 @@ export default function Home() {
 
         <div className="section-shell hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Open to senior finishing roles in Dubai / UAE</p>
-            <p className="hero-role">Senior Finishing Supervisor for Decorative Painting, Gypsum & Premium Interiors</p>
+            <p className="eyebrow">OPEN TO INTERIOR FIT-OUT & FINISHING ROLES</p>
+            <p className="hero-role">Senior Interior Fit-Out & Finishing Supervisor</p>
             <h1>{person.name}</h1>
             <div className="mobile-hero-portrait" aria-label={`Professional portrait of ${person.name}`}>
               <div className="mobile-portrait-frame">
                 <img src={person.profileImage} alt={`Professional portrait of ${person.name}`} />
               </div>
               <div className="mobile-role-card">
-                <p>Seeking senior roles</p>
-                <span>Finishing supervisor, painting supervisor or gypsum team supervisor.</span>
+                <p>Open to senior roles</p>
+                <span>Interior Fit-Out Supervisor, Finishing Supervisor, Decorative Gypsum Supervisor, or Painting Supervisor.</span>
               </div>
             </div>
             <p className="hero-lede">
-              Senior Finishing Supervisor for Decorative Painting, Gypsum & Premium Interiors.
+              Senior Interior Fit-Out & Finishing Supervisor specialized in Decorative Gypsum, Marmorino, Venetian Plaster & Premium Interior Finishing.
             </p>
             <p className="hero-summary">
-              20+ years of hands-on experience delivering high-end decorative finishes, gypsum works, mural
-              painting and premium interior details for residential, commercial and luxury spaces.
+              20+ years of hands-on experience in decorative gypsum works, Marmorino-style finishes, Venetian plaster, decorative plaster finishes, mural painting, site supervision, team coordination, premium interior finishing, and experience with Matteo Brioni materials for residential, commercial, villa, hotel, and retail projects.
             </p>
             <div className="button-row">
               <Link className="button button-primary focus-ring" to="/contact">
-                Contact for opportunities
+                Contact for Opportunities
               </Link>
-              <a
-                className="button button-primary"
-                href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=abdellah.aitmessaoud01@gmail.com&su=Project%20Brief%20Inquiry&body=Hello%20Abdellah,%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20send%20you%20a%20project%20brief.%0D%0A%0D%0AProject%20type:%0D%0ALocation:%0D%0AScope%20of%20work:%0D%0ATimeline:%0D%0ABudget%20range:%0D%0A%0D%0ABest%20regards,"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Send Project Brief
-              </a>
+              <Link className="button button-primary" to="/projects">
+                View Projects
+              </Link>
               <a
                 className="button button-primary focus-ring"
                 href="/abdellahcv.pdf"
@@ -67,8 +61,8 @@ export default function Home() {
               <img src={person.profileImage} alt={`Professional portrait of ${person.name}`} />
             </div>
             <div className="role-card">
-              <p>Seeking senior roles</p>
-              <span>Finishing supervisor, painting supervisor or gypsum team supervisor.</span>
+              <p>Open to senior roles</p>
+              <span>Interior Fit-Out Supervisor, Finishing Supervisor, Decorative Gypsum Supervisor, or Painting Supervisor.</span>
             </div>
           </div>
         </div>

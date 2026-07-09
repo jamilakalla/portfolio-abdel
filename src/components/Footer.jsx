@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="section-shell footer-shell">
-        <p>© 2026 {person.name}. Decorative gypsum, mural painting and luxury interior finishes.</p>
+        <p>© 2026 {person.name}. All Rights Reserved.</p>
         <div className="footer-links">
           <a className="focus-ring" href={person.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
