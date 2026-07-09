@@ -47,7 +47,7 @@ export default function Home() {
               </Link>
               <a
                 className="button button-primary focus-ring"
-                href="/abdellahcv.pdf"
+                href="/abdellahcv1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
